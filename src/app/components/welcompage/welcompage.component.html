@@ -1,0 +1,23 @@
+<section class="hero">
+    <header class="header-content">
+        <div class="logo" aria-label="Website Logo">
+            <img src="assets\Consero Logo.png" alt="Logo" />
+        </div>
+        <nav class="nav-links">
+            <a routerLink="/home" aria-label="Go to home">Home</a>
+            <a routerLink="/about" aria-label="Explore features">About</a>
+            <a routerLink="/login" aria-label="Logout">Logout</a>
+        </nav>
+    </header>
+    <div class="hero-content">
+        <!-- <h1>Welcome to <span class="highlight">CONSERO</span></h1> -->
+         <h3>Consero provides PE & VC backed companies with the rigor and sophistication of a Fortune 100 Finance & Accounting function.</h3>
+        <a  routerLink="/welcomePage" fragment="aboutpage" class="btn btn-primary">More</a>
+    </div>
+</section>
+<section id="homepage" style="height: 350px;">
+    <app-home-page></app-home-page>
+</section>
+<section id="aboutpage">
+    <app-about-page></app-about-page>
+</section>

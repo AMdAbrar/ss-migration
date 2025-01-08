@@ -1,0 +1,88 @@
+about.component.css
+.about-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 20px;
+  }
+  
+  .about-header {
+    text-align: center;
+    background-color: #4285F4;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+  }
+  
+  section {
+    margin: 40px 0;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4285F4;
+  }
+  
+  .company-mission p,
+  .company-history p,
+  .company-values ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .company-values ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .company-values li {
+    margin-bottom: 15px;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .team-member {
+    text-align: center;
+    width: 30%;
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .team-member h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .team-member p {
+    font-size: 1.1rem;
+    color: #777;
+  }
+  
+  .contact-us {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .contact-us p {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  
