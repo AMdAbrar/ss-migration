@@ -1,0 +1,105 @@
+<!-- <mat-tab-group>
+  <mat-tab label="Internet/Gdrive">
+    <div class="actions">
+      <mat-form-field appearance="fill">
+        <mat-label>Select Group Names</mat-label>
+        <mat-select
+          (selectionChange)="selectSubSegment($event.value)"
+          matTooltip="Select a segment"
+        >
+          <mat-option
+            *ngFor="let segment of ['FGHJKL', 'FGHJKL', 'FGHJKL', 'd', 'e', 'f']"
+            [value]="segment"
+          >
+            {{ segment | uppercase }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="selectedSubSegment" class="sub-actions">
+      <h3>Options for {{ selectedSubSegment | uppercase }}:</h3>
+      <mat-form-field appearance="outline">
+        <mat-label>Select URL</mat-label>
+        <mat-select
+          (selectionChange)="selectOption($event.value)"
+          matTooltip="Select an option"
+        >
+          <mat-option value="option1">Internet</mat-option>
+          <mat-option value="option2">Gdrive</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div *ngIf="selectedOption" class="links">
+        <h4>Links for {{ selectedOption | titlecase }}:</h4>
+        <ng-container
+          *ngFor="
+            let link of segmentData[selectedSubSegment]?.[selectedOption] || []
+          "
+        >
+          <a href="#">{{ link }}</a>
+        </ng-container>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Exm2">
+    <p class="content">This is Exm2 content with additional details for styling!</p>
+  </mat-tab>
+</mat-tab-group> -->
+<mat-tab-group>
+  <mat-tab label="Internet/Gdrive">
+    <div class="actions">
+      <mat-form-field appearance="fill">
+        <mat-label>Select Group Names</mat-label>
+        <mat-select
+          (selectionChange)="selectSubSegment($event.value)"
+          matTooltip="Select a segment"
+        >
+          <mat-option
+            *ngFor="let segment of ['Consero General Quick Link', 'Delivery', 'Professional Service Group', 'Human Resources', 'Sales & Marketing', 'US Admin','Product']"
+            [value]="segment"
+          >
+            {{ segment | uppercase }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="selectedSubSegment" class="sub-actions">
+      <h3>Options for {{ selectedSubSegment | uppercase }}:</h3>
+      <mat-form-field appearance="outline">
+        <mat-label>Select URL</mat-label>
+        <mat-select
+          (selectionChange)="selectOption($event.value)"
+          matTooltip="Select an option"
+        >
+          <mat-option value="Internet">Internet</mat-option>
+          <mat-option value="Gdrive">Gdrive</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div *ngIf="selectedOption" class="links">
+        <h4>Links for {{ selectedOption | titlecase }}:</h4>
+        <div class="links-container">
+          <ng-container
+            *ngFor="let link of segmentData[selectedSubSegment]?.[selectedOption] || []"
+          >
+            <a 
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-item"
+            >
+              {{ link.text }}
+            </a>
+          </ng-container>
+        </div>
+      </div>
+      
+    </div>
+  </mat-tab>
+  <mat-tab label="APP">
+    <p class="content">This is Exm2 content with additional details for styling!</p>
+  </mat-tab>
+</mat-tab-group>
+

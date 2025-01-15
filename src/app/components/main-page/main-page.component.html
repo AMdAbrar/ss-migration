@@ -1,0 +1,151 @@
+<div class="portal-container">
+    <h1>Links</h1>
+  
+    <!-- Initial Buttons -->
+    <div class="button-group">
+      <button (click)="selectExam(1)">Internet /GDrive/ Onedrive</button>
+      <button (click)="selectExam(2)">APP</button>
+    </div>
+  
+    <!-- Display Additional Buttons for Exam 1 -->
+    <div class="additional-buttons" *ngIf="selectedExam === 1">
+      <h2>Group Names
+      </h2>
+      <div class="button-group">
+        <div class="portal-container">
+          <button (click)="selectOption(1)">Consero General Quick Link</button>
+          <div *ngIf="selectedOption === 1" class="nested-buttons">
+            <!-- Internet and GDrive in a row -->
+            <button *ngIf="nestedOption !== 'GDrive1'" (click)="selectNestedOption('Internet1')">Internet</button>
+            <button  *ngIf="nestedOption !== 'Internet1'" (click)="selectNestedOption('GDrive1')">GDrive</button>
+          </div>
+        
+          <!-- Sub-buttons for Internet -->
+          <div *ngIf="nestedOption === 'Internet1'" class="link-buttons">
+            <!-- <a [routerLink]="'https://conseroglobal.com/'" class="link-button">Consero Global</a> -->
+            <a target="_blank" href="https://conseroglobal.com/">Consero Global</a>
+            <a target="_blank" href="https://clientlogin.conseroglobal.com/">SIMPL</a>
+            <a target="_blank" href="https://system.nexonia.com/assistant/showSignin">Nexonia T&E</a>
+            <a target="_blank" href="https://hello.chorus.ai/login?next=http:%2F%2Fchorus.ai%2Fdashboard">Chorus </a>
+            <a target="_blank" href="https://login.salesforce.com/">Sales Force</a>
+            <a target="_blank" href="https://conseroglobal.ceosoftware.co/v2#/login">Khorus</a>
+          </div>
+          <!-- Sub-buttons for GDrive -->
+          <div *ngIf="nestedOption === 'GDrive1'" class="link-buttons">
+            <a target="_blank" href="https://drive.google.com/drive/my-drive">GDrive</a>
+          </div>
+          <!--  -->
+          <!-- <div class="navigation-buttons">
+            <button 
+              (click)="navigate('prev')" 
+              [disabled]="nestedOption === null || nestedOption === 'Internet1'">
+              &#8592; Prev
+            </button>
+            <button 
+              (click)="navigate('next')" 
+              [disabled]="nestedOption === null || nestedOption === 'GDrive1'">
+              Next &#8594;
+            </button>
+          </div> -->
+          <!--  -->
+        </div>
+        
+        <div class="portal-container">
+          <button (click)="selectOption(2)">US Admin</button>
+          <div *ngIf="selectedOption === 2" class="nested-buttons">
+            <!-- Internet and GDrive in a row -->
+            <!-- <button (click)="selectNestedOption('Internet2')">Internet</button> -->
+            <button (click)="selectNestedOption('GDrive2')">GDrive</button>
+          </div>
+        
+          <!-- Sub-buttons for Internet -->
+          <!-- <div *ngIf="nestedOption === 'Internet2'" class="link-buttons">
+            <button (click)="handleLinkClick('A')">A</button>
+            <button (click)="handleLinkClick('B')">B</button>
+            <button (click)="handleLinkClick('C')">C</button>
+          </div> -->
+        
+          <!-- Sub-buttons for GDrive -->
+          <div *ngIf="nestedOption === 'GDrive2'" class="link-buttons">
+            <a target="_blank" href="https://drive.google.com/file/d/1eCwZQlH2QiZ0_oZbSbJdOeZFs9ZpTKAW/view">Meeting Cadence-Client Services
+            </a>
+              <a target="_blank" href="https://drive.google.com/file/d/1JMPupucvAmO_M9HGguOsLjVavy9FQsqW/view">Acronyms</a>
+          </div>
+        </div>
+        <div class="portal-container">
+  
+          <button (click)="selectOption(3)">Professional Service Group</button>
+          <div *ngIf="selectedOption === 3" class="nested-buttons">
+            <button>Internet</button>
+            <button>GDrive</button>
+          </div>
+        </div>
+        <div class="portal-container">
+  
+          <button (click)="selectOption(4)">Human Resources</button>
+          <div *ngIf="selectedOption === 4" class="nested-buttons">
+            <button>Internet</button>
+            <button>GDrive</button>
+          </div>
+        </div>
+  
+        <div class="portal-container">
+  
+          <button (click)="selectOption(5)">Delivery</button>
+          <div *ngIf="selectedOption === 5" class="nested-buttons">
+            <button>Internet</button>
+            <button>GDrive</button>
+          </div>
+        </div>
+  
+        <div class="portal-container">
+          <button (click)="selectOption(6)">Sales & Marketing</button>
+          <div *ngIf="selectedOption === 6" class="nested-buttons">
+            <button>Internet</button>
+            <button>GDrive</button>
+          </div>
+        </div>
+  
+          <!-- <div class="portal-container">
+            <button (click)="selectOption(7)">Product</button>
+            <div *ngIf="selectedOption === 7" class="nested-buttons">
+              <button>Internet</button>
+              <button>GDrive</button>
+            </div>
+          </div> -->
+          <div class="portal-container">
+            <button (click)="selectOption(7)">Product</button>
+            <div *ngIf="selectedOption === 7 && !nestedOption" class="nested-buttons">
+              <button (click)="selectNestedOption('Internet')">Internet</button>
+              <button (click)="selectNestedOption('GDrive')">GDrive</button>
+            </div>
+        
+            <div *ngIf="nestedOption === 'Internet'" class="link-buttons">
+              <div class="navigation-header">
+                <!-- Back Icon -->
+                <!-- <button class="back-button" (click)="goBack()">&#8592;</button> -->
+  
+                <button class="back-button" (click)="goBack()" class="current-option">&#8592; Internet</button>
+                <!-- <span class="current-option">Internet</span> -->
+              </div>
+              <!-- Links for Internet -->
+              <a href="https://example-a.com" target="_blank" class="link-button">A</a>
+              <a href="https://example-b.com" target="_blank" class="link-button">B</a>
+              <a href="https://example-c.com" target="_blank" class="link-button">C</a>
+            </div>
+        
+            <div *ngIf="nestedOption === 'GDrive'" class="link-buttons">
+              <div class="navigation-header">
+                <!-- Back Icon -->
+                <button class="back-button" (click)="goBack()" class="current-option">&#8592; GDrive</button>
+                <!-- <span class="back-button" (click)="goBack()" class="current-option">&#8592;GDrive</span> -->
+              </div>
+              <!-- Links for GDrive -->
+              <a href="https://example-d.com" target="_blank" class="link-button">D</a>
+              <a href="https://example-e.com" target="_blank" class="link-button">E</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <app-popup *ngIf="showPopup" (close)="showPopup = false"></app-popup> -->

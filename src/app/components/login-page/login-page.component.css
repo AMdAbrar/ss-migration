@@ -4,19 +4,22 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #CAF0F8;
     font-family: Arial, sans-serif;
   }
   
   /* Card style for the login box */
   .login-card {
-    background: white;
+    /* background: white; */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 300px;
+    width: 400px;
+    height: 450px;
+    background-color: ghostwhite;
   }
+  /* hi all, very good evening, ok can i share my screen  */
   
   /* Title style */
   .login-title {
@@ -140,4 +143,32 @@
       background-color: #004085;
       transform: translateY(1px);
     }
-  
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Ensures logo is on the left and links are on the right */
+    }
+    .custom-navbar {
+      background-color: #13438C; /* Blue color */
+    }
+    
+    .navbar-logo {
+      height: 60px; /* Adjust height as needed */
+      max-width: 150%;
+    }
+    
+    .navbar-nav {
+      display: flex;
+      gap: 15px;
+      font-size:x-large; /* Adds space between the navigation links */
+    }
+    
+    .nav-link {
+      text-decoration: none;
+      color: #333; /* Customize the color */
+    }
+    
+    .nav-link:hover {
+      color: #007bff; /* Highlight on hover */
+    }
+    

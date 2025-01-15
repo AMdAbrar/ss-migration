@@ -4,20 +4,34 @@
             <img src="assets\Consero Logo.png" alt="Logo" />
         </div>
         <nav class="nav-links">
-            <a routerLink="/home" aria-label="Go to home">Home</a>
-            <a routerLink="/about" aria-label="Explore features">About</a>
+                <!-- <a routerLink="/welcomePage" fragment="apppage" aria-label="Go to home">Consero-Links</a>
+                <a routerLink="/welcomePage" fragment="aboutpage" aria-label="Explore features">About</a> -->
             <a routerLink="/login" aria-label="Logout">Logout</a>
         </nav>
     </header>
     <div class="hero-content">
         <!-- <h1>Welcome to <span class="highlight">CONSERO</span></h1> -->
-         <h3>Consero provides PE & VC backed companies with the rigor and sophistication of a Fortune 100 Finance & Accounting function.</h3>
+         <h1>This website will feature a clean, intuitive layout with multiple dropdown menus and categories, allowing users to easily navigate between different sections, each dedicated to a specific department or service. 
+        </h1>
         <a  routerLink="/welcomePage" fragment="aboutpage" class="btn btn-primary">More</a>
     </div>
+</section>
+<!-- i need to create new project in vs code and then i need to push this project to github so give me complete solutions  -->
+<section id="apppage" class="xyz">
+    <app-shashank-page></app-shashank-page>
 </section>
 <section id="homepage" style="height: 350px;">
     <app-home-page></app-home-page>
 </section>
-<section id="aboutpage">
+<section id="apppage" style="height: 550px;">
+    <app-main-page></app-main-page>
+ </section>
+<section id="apppage"  style="height: 550px;">
+    <app-app-page></app-app-page>
+</section>
+<section id="aboutpage" class="aaa">
     <app-about-page></app-about-page>
 </section>
+
+
+

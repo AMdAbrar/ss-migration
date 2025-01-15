@@ -1,0 +1,42 @@
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.sub-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 8px; /* Add spacing between links */
+  align-items: flex-start; /* Align links to the left */
+  margin-left: 0; /* Ensure no unintended horizontal offset */
+}
+
+.link-item a {
+  text-decoration: none;
+  color: #1976d2; /* Link color */
+  font-weight: bold;
+}
+
+.link-item a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  margin-top: 16px; /* Add some space from the dropdown above */
+  text-align: left; /* Ensure text alignment is to the left */
+}
+
+
